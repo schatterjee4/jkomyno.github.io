@@ -1,0 +1,75 @@
+@import "../../override.scss";
+
+$bracketsColor: $lightThemeLink;
+
+.matrix-brackets {
+  width: 100%;
+  margin: 25px auto;
+  position: relative;
+
+  &:before,
+  &:after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    border-top: 4px solid $bracketsColor;
+    border-bottom: 4px solid $bracketsColor;
+    padding: 0px 4px;
+  }
+
+  &:before {
+    left: 0;
+    border-left: 4px solid $bracketsColor;
+  }
+
+  &:after {
+    right: 0;
+    border-right: 4px solid $bracketsColor;
+  }
+}
+
+.matrix-wrapper {
+  padding: 0 20px;
+}
+
+.matrix-column {
+  flex: 1;
+  font-weight: 200;
+  line-height: 3rem;
+  color: $lightThemeText;
+}
+
+@media (min-width: $small-tablet) {
+  .matrix-brackets {
+    width: 70%;
+  }
+
+  .matrix-wrapper {
+    padding: 0 40px;
+  }
+
+  .matrix-column {
+    line-height: 4rem;
+  }
+}
+
+@media (min-width: $tablet) {
+  .matrix-brackets {
+    width: 375px;
+  }
+
+  .matrix-wrapper {
+    padding: 0 40px;
+  }
+
+  .matrix-column {
+    line-height: 3.2rem;
+  }
+}
+
+@media (min-width: $desktop) {
+  .matrix-brackets {
+    width: 425px;
+  }
+}
