@@ -25,7 +25,7 @@ echo "Committing into master"
 # adds everything and commits to master
 git add .
 git commit -m "Travis build"
-git remote add origin-deploy https://jkomyno:$GITHUB_TOKEN@github.com/jkomyno/jkomyno.github.io.git
+git remote add origin-deploy https://$AUTHOR:$GITHUB_TOKEN@github.com/$AUTHOR/$REPOSITORY.git
 
 echo "Pushing into master"
 git push -f --set-upstream origin-deploy master
