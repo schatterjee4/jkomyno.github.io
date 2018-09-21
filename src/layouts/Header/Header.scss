@@ -1,0 +1,28 @@
+@import "../../override.scss";
+
+.navbar svg.logo {
+  height: 10vw;
+
+  @media (min-width: $small-tablet) {
+    height: 6vw;
+  }
+
+  @media (min-width: $tablet) {
+    height: 50px;
+  }
+
+  @media (min-width: $desktop) {
+    height: 50px;
+  }
+}
+
+.ext-icon-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  &:hover a path {
+    transition: all .3s ease;
+    fill: #FFF;
+  }
+}
