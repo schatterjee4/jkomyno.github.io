@@ -1,0 +1,49 @@
+import * as React from 'react';
+import { Link } from 'src/components/Link';
+import { Section } from 'src/components/Section';
+import { Description } from 'src/components/Text';
+import { InfoContext, InfoContextType } from 'src/context';
+
+export const Opportunities: React.SFC<{ email: string }> = ({ email }) => {
+  const opportunities = {
+    anyNew: `for any new opportunities.`,
+    drop: `Drop me an `,
+    email: <Link newTab label="email" url={`mailto://${email}`} />
+  };
+
+  return (
+    <Description>{opportunities.drop} {opportunities.email} {opportunities.anyNew}</Description>
+  );
+};
+
+export const About: React.SFC<{}> = () => {
+  const links = {
+    androidiani: <Link newTab label="Androidiani" url="http://www.androidiani.com" />,
+    brainwise: <Link newTab label="Brainwise" url="https://brainwise.it" />,
+    skydreamer: <Link newTab label="Skydreamer" url="https://www.crunchbase.com/organization/skydreamer" />,
+  }
+  const experience = {
+    onSite: `as well as on-site`,
+    remote: `I have experience in working with remote-only teams`,
+  };
+  const study = `I'm a third year Computer Science student at the University of
+                Padova. I'm curious and passionate about advanced math topics, programming
+                paradigms and software engineering best practices.`;
+
+  const renderOpportunities = ({ authorEmail }: InfoContextType) => (
+    <Opportunities email={authorEmail} />
+  );
+
+  return (
+    <Section section="About" className="about">
+      <Description>{study}</Description>
+      <Description>
+        {experience.remote} ({links.skydreamer}, {links.androidiani}) {experience.onSite} ({links.brainwise}).
+      </Description>
+      <hr />
+      <InfoContext.Consumer>
+        {renderOpportunities}
+      </InfoContext.Consumer>
+    </Section>
+  );
+};
