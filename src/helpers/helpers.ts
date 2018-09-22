@@ -34,3 +34,16 @@ export function joinAnd<T>(arr: T[], separator = ', ', and = 'and'): Array<T|str
     arr[last],
   ]);
 }
+
+/**
+ * Builds an email address on the fly, given an author and a provider.
+ * This is done in order to avoid an excessive amount of web crawlers from
+ * getting the email.
+ * @param author The complete name of the author, in the form `name.surname`
+ * @param provider In the form `gmail.com`, `yahoo.it` etc
+ */
+export function buildEmailAddress(author: string, provider: string) {
+  const prefix = author.split(' ').join('.').toLowerCase();
+
+  return `${prefix}@${provider}`;
+}
