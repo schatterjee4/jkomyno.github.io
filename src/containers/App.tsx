@@ -2,7 +2,7 @@ import * as React from 'react';
 import { LayoutShell } from 'src/components/LayoutShell';
 import { InfoContext, InfoContextType } from 'src/context';
 import { buildEmailAddress } from 'src/helpers';
-// import { About, Contacts, Hero, Skills } from 'src/pages';
+import { About, Contacts, Hero, Skills } from 'src/pages';
 
 export class App extends React.PureComponent {
 
@@ -10,17 +10,13 @@ export class App extends React.PureComponent {
     return (
       <InfoContext.Provider value={this.info}>
         <LayoutShell color="#34AAFF" headerElement={this.headerElement!}>
-          {
-            /*
-              <Hero />
-              <About />
-              <Skills
-                leftSkills={this.leftSkills}
-                rightSkills={this.rightSkills}
-              />
-              <Contacts links={this.contactLinks} />
-            */
-          }
+          <Hero />
+          <About />
+          <Skills
+            leftSkills={this.leftSkills}
+            rightSkills={this.rightSkills}
+          />
+          <Contacts links={this.contactLinks} />
         </LayoutShell>
       </InfoContext.Provider>
     );
@@ -47,7 +43,6 @@ export class App extends React.PureComponent {
     };
   }
 
-  /*
   private get leftSkills(): string[] {
     return [
       'ReactJS',
@@ -90,5 +85,4 @@ export class App extends React.PureComponent {
       }
     ];
   }
-  */
 }
