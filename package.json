@@ -17,12 +17,13 @@
     "start": "npm-run-all -p watch-css start-js",
     "build-js": "react-scripts-ts build",
     "build": "npm-run-all build-css build-js",
+    "postbuild": "npm run clear-css",
     "test": "react-scripts-ts test --env=jsdom",
     "eject": "react-scripts-ts eject",
     "build-css": "node-sass-chokidar src/ -o src/ --output-style compressed",
     "watch-css": "node-sass-chokidar src/ -o src/ -w --source-map true --source-map-contents sass",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "bash ./deploy.sh",
     "clear-css": "find ./src -name *.css -type f -delete"
   },
   "devDependencies": {

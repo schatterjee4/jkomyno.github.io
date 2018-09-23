@@ -1,0 +1,25 @@
+language: node_js
+
+node_js:
+  - 'stable'
+  - '8'
+
+sudo: false
+
+branches:
+  only:
+  - source
+
+install:
+  - npm uninstall typescript --no-save
+  - npm uninstall tslint --no-save
+  - npm install
+
+before_script:
+  - chmod +x ./deploy.sh
+
+script:
+  - npm run deploy
+
+git:
+  depth: 1
