@@ -7,9 +7,15 @@
 @import "../node_modules/bulma/sass/base/_all.sass";
 @import "../node_modules/bulma/sass/elements/button.sass";
 @import "../node_modules/bulma/sass/elements/container.sass";
-@import "../node_modules/bulma/sass/elements/content.sass";
 @import "../node_modules/bulma/sass/elements/title.sass";
 @import "../node_modules/bulma/sass/components/card.sass";
 @import "../node_modules/bulma/sass/components/navbar.sass";
 @import "../node_modules/bulma/sass/layout/section.sass";
 @import "../node_modules/bulma/sass/layout/footer.sass";
+
+.is-code {
+  font-family: monospace;
+  padding: 0.25em 0.5em 0.25em;
+  background: whitesmoke;
+  display: inline-block;
+}

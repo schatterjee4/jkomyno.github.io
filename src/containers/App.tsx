@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { AnimatedWrapper } from 'src/components/AnimatedWrapper';
 import { LayoutShell } from 'src/components/LayoutShell';
 import { InfoContext, InfoContextType } from 'src/context';
 import { buildEmailAddress } from 'src/helpers';
@@ -10,12 +11,14 @@ export class App extends React.PureComponent {
     return (
       <InfoContext.Provider value={this.info}>
         <LayoutShell color="#34AAFF" headerElement={this.headerElement!}>
-          <Hero />
-          <About />
-          <Skills
-            leftSkills={this.leftSkills}
-            rightSkills={this.rightSkills}
-          />
+          <AnimatedWrapper>
+            <Hero />
+            <About />
+            <Skills
+              leftSkills={this.leftSkills}
+              rightSkills={this.rightSkills}
+            />
+          </AnimatedWrapper>
           <Contacts links={this.contactLinks} />
         </LayoutShell>
       </InfoContext.Provider>
