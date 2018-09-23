@@ -22,7 +22,8 @@
     "build-css": "node-sass-chokidar src/ -o src/ --output-style compressed",
     "watch-css": "node-sass-chokidar src/ -o src/ -w --source-map true --source-map-contents sass",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "clear-css": "find ./src -name *.css -type f -delete"
   },
   "devDependencies": {
     "@types/classnames": "^2.2.6",
