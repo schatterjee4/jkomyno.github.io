@@ -15,7 +15,12 @@
 
 .is-code {
   font-family: monospace;
-  padding: 0.25em 0.5em 0.25em;
+  padding: 0.1em 0.4em 0.1em;
   background: whitesmoke;
   display: inline-block;
+  white-space: nowrap;
+}
+
+.width-100 {
+  width: 100%;
 }
