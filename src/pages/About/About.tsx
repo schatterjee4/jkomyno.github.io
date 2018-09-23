@@ -6,13 +6,13 @@ import { InfoContext, InfoContextType } from 'src/context';
 
 export const Opportunities: React.SFC<{ email: string }> = ({ email }) => {
   const opportunities = {
-    anyNew: `for any new opportunities.`,
     drop: `Drop me an `,
-    email: <Link newTab label="email" url={`mailto://${email}`} />
+    email: <Link newTab label="email" url={`mailto:${email}`} />,
+    new: `for new opportunities.`,
   };
 
   return (
-    <Description>{opportunities.drop} {opportunities.email} {opportunities.anyNew}</Description>
+    <Description>{opportunities.drop} {opportunities.email} {opportunities.new}</Description>
   );
 };
 
