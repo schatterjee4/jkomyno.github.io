@@ -12,6 +12,8 @@ $link-hover: $lightThemeLinkHover;
 $widescreen-enabled: false;
 $fullhd-enabled: false;
 $size-1: 4rem;
+$size-5: 1.2rem;
+$body-line-height: 1.4;
 
 // Update Bulma's component variables
 $body-background-color: $lightThemeBackground;
@@ -19,7 +21,7 @@ $text: $lightThemeText;
 $text-strong: $lightThemeStrongText;
 $body-size: 25px;
 $footer-background-color: $lightThemeFooterBackground;
-$section-padding: 2rem 1.5rem;
+$section-padding: 2rem 1rem;
 $title-line-height: 1.1;
 $title-weight: 400;
 $weight-normal: 300;
