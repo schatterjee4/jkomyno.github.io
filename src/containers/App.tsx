@@ -38,6 +38,7 @@ export class App extends React.PureComponent {
       authorEmail: buildEmailAddress(author, 'gmail.com'),
       authorUrl: `https://github.com/${nickname}`,
       nickname,
+      repository: 'jkomyno.github.io',
       techStack: [
         'ReactJS',
         'Bulma',

@@ -19,11 +19,11 @@ export const LayoutShell: React.SFC<Props> = ({ children, color, headerElement }
     </span>
   );
 
-  const renderHeader = ({ authorUrl }: InfoContextType ) => (
+  const renderHeader = ({ authorUrl, repository }: InfoContextType ) => (
     <Header
       Logo={BrandElement}
       ExternalElement={ExternalElement}
-      externalUrl={authorUrl} />
+      externalUrl={`${authorUrl}/${repository}`} />
   );
 
   const renderFooter = ({ author, authorUrl, techStack }: InfoContextType) => (

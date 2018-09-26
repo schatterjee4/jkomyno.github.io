@@ -5,6 +5,7 @@ export interface InfoContextType {
 	authorEmail: string;
 	authorUrl: string;
 	nickname: string;
+	repository: string;
   techStack: string[];
 };
 
