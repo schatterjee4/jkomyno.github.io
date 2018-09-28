@@ -1,4 +1,5 @@
-# jkomyno.github.io
+<img src="https://raw.githubusercontent.com/jkomyno/jkomyno.github.io/source/images/banner.jpg" alt="jkomyno banner" align="center" />
+<br />
 
 <div align="center">
   <!-- Dependency Status -->
