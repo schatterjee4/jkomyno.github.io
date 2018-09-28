@@ -26,10 +26,11 @@ export const Hero: React.SFC<{}> = () => {
     </InfoContext.Consumer>
   );
 
-  const renderActionButton = ({ resumeUrl }: InfoContextType) => (
+  const renderActionButton = ({ resumeUrl, onResumeDownloaded }: InfoContextType) => (
     <ActionButton
-      url={resumeUrl}
       message="Get my resume"
+      onClick={onResumeDownloaded}
+      url={resumeUrl}
     />
   );
 
