@@ -6,6 +6,7 @@ export interface InfoContextType {
 	authorUrl: string;
 	nickname: string;
 	repository: string;
+	resumeUrl: string;
   techStack: string[];
 };
 

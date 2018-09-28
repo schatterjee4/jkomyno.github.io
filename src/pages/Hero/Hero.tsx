@@ -26,6 +26,19 @@ export const Hero: React.SFC<{}> = () => {
     </InfoContext.Consumer>
   );
 
+  const renderActionButton = ({ resumeUrl }: InfoContextType) => (
+    <ActionButton
+      url={resumeUrl}
+      message="Get my resume"
+    />
+  );
+
+  const ActionButtonComponent = (
+    <InfoContext.Consumer>
+      {renderActionButton}
+    </InfoContext.Consumer>
+  )
+
   return (
     <Section hideTitle section="Hero" className="hero">
       <div className="has-text-centered">
@@ -38,10 +51,7 @@ export const Hero: React.SFC<{}> = () => {
         sentence={matrixText}
       />
       <Title center={true}>{standup}</Title>
-      <ActionButton
-        url="/resume.pdf"
-        message="Get my resume"
-      /> 
+      {ActionButtonComponent}
     </Section>
   );
 };

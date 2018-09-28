@@ -32,13 +32,17 @@ export class App extends React.PureComponent {
   private get info(): InfoContextType {
     const author = 'Alberto Schiabel';
     const nickname = 'jkomyno';
+    const authorUrl = `https://github.com/${nickname}`;
+    const repository = `${authorUrl}/jkomyno.github.io`;
+    const resumeUrl = `${repository}/raw/master/resume.pdf`
 
     return {
       author,
       authorEmail: buildEmailAddress(author, 'gmail.com'),
-      authorUrl: `https://github.com/${nickname}`,
+      authorUrl,
       nickname,
-      repository: 'jkomyno.github.io',
+      repository,
+      resumeUrl,
       techStack: [
         'ReactJS',
         'Bulma',
