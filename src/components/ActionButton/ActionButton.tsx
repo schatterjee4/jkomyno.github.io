@@ -28,16 +28,18 @@ export const ArrowRight: React.SFC<{}> = () => (
 
 interface Props {
   message: string;
+  onClick: () => void;
   url: string;
 }
 
-export const ActionButton: React.SFC<Props> = ({ message, url }) => (
+export const ActionButton: React.SFC<Props> = ({ message, onClick, url }) => (
   <Column>
     <div className="box action-button-container has-text-centered">
       <Link
         className="button action-button is-size-3 is-size-6-mobile"
         fillEffect={false}
         label={message}
+        onClick={onClick}
         url={url}
       >
         {message} <ArrowRight />

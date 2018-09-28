@@ -5,6 +5,7 @@ export interface InfoContextType {
 	authorEmail: string;
 	authorUrl: string;
 	nickname: string;
+	onResumeDownloaded: () => void;
 	repository: string;
 	resumeUrl: string;
   techStack: string[];
