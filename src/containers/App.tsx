@@ -1,11 +1,18 @@
 import * as React from 'react';
+import * as ReactGA from 'react-ga';
 import { AnimatedWrapper } from 'src/components/AnimatedWrapper';
 import { LayoutShell } from 'src/components/LayoutShell';
 import { InfoContext, InfoContextType } from 'src/context';
 import { buildEmailAddress } from 'src/helpers';
 import { About, Contacts, Hero, Skills } from 'src/pages';
 
+ReactGA.initialize('UA-126612593-1');
+
 export class App extends React.PureComponent {
+
+  public componentDidMount() {
+    ReactGA.pageview('/home');
+  }
 
   public render() {
     return (
@@ -25,6 +32,13 @@ export class App extends React.PureComponent {
     );
   }
 
+  private onResumeDownloaded() {
+    ReactGA.event({
+      action: 'Downloaded Resume',
+      category: 'Promotion',
+    });
+  }
+
   private get headerElement() {
     return document.getElementById('header-root');
   }
@@ -41,6 +55,7 @@ export class App extends React.PureComponent {
       authorEmail: buildEmailAddress(author, 'gmail.com'),
       authorUrl,
       nickname,
+      onResumeDownloaded: this.onResumeDownloaded,
       repository,
       resumeUrl,
       techStack: [

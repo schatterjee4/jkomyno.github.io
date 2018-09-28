@@ -8,6 +8,7 @@ interface Props {
   fillEffect?: boolean;
   label: string;
   newTab?: boolean;
+  onClick?: () => void;
   url?: string;
 };
 
@@ -16,13 +17,14 @@ interface Props {
  * It accepts any valid React Element as children. A particular filling effect will be enabled
  * by default if `newTab` (which loads the `url` link on a new window) is set to true.
  */
-export const Link: React.SFC<Props> = ({ children, className, fillEffect, label, newTab, url }) => (
+export const Link: React.SFC<Props> = ({ children, className, fillEffect, label, newTab, onClick, url }) => (
   <a
     className={cx(className, { 'ext-link': newTab && fillEffect })}
     href={url}
     aria-label={label}
     rel={newTab! ? 'noreferrer noopener' : ''}
     target={newTab! ? '_blank' : ''}
+    onClick={onClick}
   >
     {
       (label && !children) ?
