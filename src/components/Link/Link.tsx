@@ -5,14 +5,20 @@ import './Link.css';
 interface Props {
   children?: React.ReactNode;
   className?: string;
+  fillEffect?: boolean;
   label: string;
   newTab?: boolean;
   url?: string;
 };
 
-export const Link: React.SFC<Props> = ({ children, className, newTab, url, label }) => (
+/**
+ * This link component should handle every link throughout the app.
+ * It accepts any valid React Element as children. A particular filling effect will be enabled
+ * by default if `newTab` (which loads the `url` link on a new window) is set to true.
+ */
+export const Link: React.SFC<Props> = ({ children, className, fillEffect, label, newTab, url }) => (
   <a
-    className={cx(className, { 'ext-link': newTab! })}
+    className={cx(className, { 'ext-link': newTab && fillEffect })}
     href={url}
     aria-label={label}
     rel={newTab! ? 'noreferrer noopener' : ''}
@@ -28,5 +34,6 @@ export const Link: React.SFC<Props> = ({ children, className, newTab, url, label
 
 Link.defaultProps = {
   className: '',
+  fillEffect: true,
   url: '#',
 };
