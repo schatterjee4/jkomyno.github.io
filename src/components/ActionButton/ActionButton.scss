@@ -1,0 +1,59 @@
+@import "../../override.scss";
+
+.action-button-container {
+  padding: 1.25rem 2.5rem 1.25rem 1.5rem;
+  background-color: #EFF3FD;
+}
+
+.box .action-button {
+  & {
+    color: #FFF;
+    background: #282828;
+    border: 4px solid $lightThemeStrongText;
+    transition: all .5s;
+    position: relative;
+  }
+
+  svg {
+    margin-left: .5em;
+    fill: #FFF;
+    stroke: #FFF;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $lightThemeBackground;
+    color: $lightThemeStrongText;
+    border-color: $lightThemeLink;
+
+    svg {
+      fill: #282828;
+
+      path {
+        stroke: #282828;
+      }
+    }
+  }
+
+  #arrow-head {
+    transform-origin: right;
+    transform: scale(1, 1);
+    transition: all 200ms ease;
+  }
+
+  &:hover #arrow-head {
+    transform: scale(1, 0.9);
+    transition: all 200ms ease;
+  }
+
+  #arrow-body {
+    transform-origin: right;
+    transform: scale(0.9, 1);
+    transition: all 200ms ease;
+  }
+
+  &:hover #arrow-body {
+    transform: scale(1, 1);
+    transition: all 200ms ease;
+  }
+}
