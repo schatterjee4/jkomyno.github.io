@@ -36,7 +36,7 @@ export const ActionButton: React.SFC<Props> = ({ message, url }) => (
     <div className="box action-button-container has-text-centered">
       <Link
         newTab
-        className="button action-button"
+        className="button action-button is-size-3 is-size-6-mobile"
         fillEffect={false}
         label={message}
         url={url}

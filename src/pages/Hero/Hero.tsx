@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { ActionButton } from 'src/components/ActionButton';
 import { Matrix } from 'src/components/Matrix';
 import { Section } from 'src/components/Section';
 import { SubTitle, Title } from 'src/components/Text';
@@ -36,7 +37,11 @@ export const Hero: React.SFC<{}> = () => {
         columns={4}
         sentence={matrixText}
       />
-      <Title center={true}>{standup}</Title>      
+      <Title center={true}>{standup}</Title>
+      <ActionButton
+        url="/resume.pdf"
+        message="Get my resume"
+      /> 
     </Section>
   );
 };
