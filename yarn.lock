@@ -5909,9 +5909,9 @@ react-inview-monitor@^2.2.0:
     prop-types "^15.6.1"
     react "^16.2.0"
 
-react-matrix-text@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/react-matrix-text/-/react-matrix-text-1.1.0.tgz#3efb2c4bafdf5e6e2390dcdeb5c097098cb8ff33"
+react-matrix-text@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/react-matrix-text/-/react-matrix-text-1.1.1.tgz#140dbf922717ac2f89850a0be2737935c4118d0a"
   dependencies:
     react "^16.5.1"
 
