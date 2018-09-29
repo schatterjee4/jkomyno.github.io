@@ -106,6 +106,11 @@ export class App extends React.PureComponent {
         className: 'linkedin',
         link: 'https://www.linkedin.com/in/alberto-schiabel-a21262132/',
         platformTitle: 'Linkedin',
+      },
+      {
+        className: 'npm',
+        link: 'https://www.npmjs.com/~jkomyno',
+        platformTitle: 'Npm',
       }
     ];
   }
