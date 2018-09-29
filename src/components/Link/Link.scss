@@ -7,21 +7,9 @@ a.ext-link {
   transition: all 0.4s ease;
   box-shadow: $extLinkNormal $lightThemeLink;
 
-  /* This could be definitely adjusted with mixins */
-  &.stackoverflow {
-    box-shadow: $extLinkNormal $stackoverflow;
-  }
-
-  &.github {
-    box-shadow: $extLinkNormal $github;
-  }
-
-  &.medium {
-    box-shadow: $extLinkNormal $medium;
-  }
-
-  &.linkedin {
-    box-shadow: $extLinkNormal $linkedin;
+  @each $name, $color in $profileColors {
+    &.#{$name} { box-shadow: $extLinkNormal #{$color}; }
+    &:hover.#{$name} { box-shadow: $extLinkHover #{$color}; }
   }
 }
 
@@ -31,21 +19,5 @@ a.ext-link:hover {
 
   svg {
     color: #fff;
-  }
-
-  &.stackoverflow {
-    box-shadow: $extLinkHover $stackoverflow;
-  }
-
-  &.github {
-    box-shadow: $extLinkHover $github;
-  }
-
-  &.medium {
-    box-shadow: $extLinkHover $medium;
-  }
-
-  &.linkedin {
-    box-shadow: $extLinkHover $linkedin;
   }
 }
