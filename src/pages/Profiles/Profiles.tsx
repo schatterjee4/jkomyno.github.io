@@ -2,22 +2,22 @@ import * as React from 'react';
 import { Link } from 'src/components/Link';
 import { Section } from 'src/components/Section';
 
-interface ContactLink {
+export interface ProfileLink {
   link: string,
   className: string,
   platformTitle: string,
 };
 
 interface Props {
-  links: ContactLink[],
+  links: ProfileLink[],
 };
 
-export class Contacts extends React.PureComponent<Props> {
+export class Profiles extends React.PureComponent<Props> {
   public render() {
     const renderedLinks = this.renderLinks();
 
     return (
-      <Section section="Contacts" className="contacts">
+      <Section section="Profiles" className="profiles">
         <div className="buttons is-centered">
           {renderedLinks}
         </div>
@@ -25,7 +25,7 @@ export class Contacts extends React.PureComponent<Props> {
     );
   }
 
-  private renderLink = ({ link, className, platformTitle }: ContactLink): JSX.Element => (
+  private renderLink = ({ link, className, platformTitle }: ProfileLink): JSX.Element => (
     <Link
       newTab={true}
       label={platformTitle}
