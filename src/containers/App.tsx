@@ -111,6 +111,11 @@ export class App extends React.PureComponent {
         className: 'npm',
         link: 'https://www.npmjs.com/~jkomyno',
         platformTitle: 'Npm',
+      },
+      {
+        className: 'codepen',
+        link: 'https://codepen.io/jkomyno',
+        platformTitle: 'Codepen',
       }
     ];
   }
