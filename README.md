@@ -84,3 +84,7 @@ Since this is my personal home page, I won't accept any Pull Request, unless:
 - you want to help creating UI tests with Jest
 
 If you want to contribute but you don't know where to start from, ★ stars are more than helpful.
+
+## Related packages
+
+- [react-matrix-text](https://github.com/jkomyno/react-matrix-text) ReactJS component that splits and renders a text in a given number of columns.
