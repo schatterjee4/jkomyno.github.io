@@ -4,7 +4,8 @@ import { AnimatedWrapper } from 'src/components/AnimatedWrapper';
 import { LayoutShell } from 'src/components/LayoutShell';
 import { InfoContext, InfoContextType } from 'src/context';
 import { buildEmailAddress } from 'src/helpers';
-import { About, Contacts, Hero, Skills } from 'src/pages';
+import { About, Hero, Profiles, Skills } from 'src/pages';
+import { ProfileLink } from 'src/pages/Profiles';
 
 ReactGA.initialize('UA-126612593-1');
 
@@ -26,7 +27,7 @@ export class App extends React.PureComponent {
               rightSkills={this.rightSkills}
             />
           </AnimatedWrapper>
-          <Contacts links={this.contactLinks} />
+          <Profiles links={this.profileLinks} />
         </LayoutShell>
       </InfoContext.Provider>
     );
@@ -84,7 +85,7 @@ export class App extends React.PureComponent {
     ];
   }
 
-  private get contactLinks() {
+  private get profileLinks(): ProfileLink[] {
     return [
       {
         className: 'github',
